@@ -540,6 +540,11 @@ public final class CompletelyFairWorkQueue extends AbstractQueue<Runnable> imple
 			return queue.offer(runnable);
 		}
 
+		@Override
+		public String toString() {
+			return name;
+		}
+
 	}
 
 	private final class View extends AbstractQueue<Runnable> implements FairWorkQueue {
